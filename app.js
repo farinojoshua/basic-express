@@ -19,7 +19,7 @@ app.post("/menu", (req, res) => {
     return res.status(400).json({ message: "Item tidak boleh kosong" });
   }
   menu.push(item);
-  res.status(201).json({ message: "Berhasil tambahin data", data: menu });
+  res.status(201).json({ message: "Berhasil menambahkan data", data: menu });
 });
 
 // Tambahkan put & delete seperti sebelumnya...
