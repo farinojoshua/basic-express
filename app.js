@@ -53,7 +53,9 @@ app.delete("/menu/:index", (req, res) => {
     .json({ message: `Berhasil hapus '${deleted[0]}'`, data: menu });
 });
 
-// Jalankan server
-app.listen(port, () => {
-  console.log(`App listening on port ${port}`);
-});
+if (require.main === module) {
+  const port = 3000;
+  app.listen(port, () => {
+    console.log(`App listening on port ${port}`);
+  });
+}
